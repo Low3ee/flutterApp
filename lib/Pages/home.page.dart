@@ -7,7 +7,6 @@ import 'container.page.dart';
 import 'datapage.dart';
 import 'row.page.dart';
 import 'text.page.dart';
-import 'register.page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
