@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'column.page.dart';
 import 'container.page.dart';
+import 'datapage.dart';
 import 'row.page.dart';
 import 'text.page.dart';
 
@@ -16,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(136, 51, 4, 221),
+      backgroundColor: const Color.fromARGB(136, 51, 4, 221),
       appBar: AppBar(
         title: const Center(
             child: Text(
@@ -24,7 +25,7 @@ class _HomePageState extends State<HomePage> {
                     color: Color.fromARGB(255, 0, 0, 0),
                     fontWeight: FontWeight.bold),
                 'HOME')),
-        backgroundColor: Color.fromARGB(125, 66, 25, 179),
+        backgroundColor: const Color.fromARGB(125, 66, 25, 179),
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -78,6 +79,18 @@ class _HomePageState extends State<HomePage> {
                 child: Padding(
                   padding: EdgeInsets.all(12),
                   child: Text("4.) Text Page"),
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const DataPage()));
+              },
+              child: const Card(
+                child: Padding(
+                  padding: EdgeInsets.all(12),
+                  child: Text("4.) Data Page"),
                 ),
               ),
             )
