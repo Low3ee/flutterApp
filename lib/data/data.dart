@@ -4,13 +4,13 @@ class UserData {
   static String _gender = "laki";
   static int _age = 0;
   static String _email = "pepito.manaloto@email.com";
+  static bool _isRegistered = false;
 
-  static setData(fname, lname, age, gender, email) {
+  static setData(fname, lname, email, status) {
     _fname = fname;
     _lname = lname;
-    _age = age;
-    _gender = gender;
     _email = email;
+    _isRegistered = status;
   }
 
   static getFName() {
@@ -31,5 +31,9 @@ class UserData {
 
   static getEmail() {
     return _email;
+  }
+
+  static checkStatus() {
+    return _isRegistered;
   }
 }

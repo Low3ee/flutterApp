@@ -23,7 +23,7 @@ class _DataPageState extends State<DataPage> {
                 const SizedBox(width: 100, child: Text("First Name: ")),
                 SizedBox(
                   height: 50,
-                  width: 300,
+                  width: 500,
                   child: DecoratedBox(
                       decoration: const BoxDecoration(color: Colors.amber),
                       child: Center(child: Text(UserData.getFName()))),
