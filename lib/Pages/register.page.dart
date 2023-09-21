@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../data/data.dart';
 import 'home.page.dart';
+import 'mobileApp/login.page.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -121,7 +122,10 @@ class _RegisterPageState extends State<RegisterPage> {
                                 fontWeight: FontWeight.bold, fontSize: 20),
                             "<"),
                         onPressed: () {
-                          Navigator.of(context).pop();
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: ((context) => const LogInPage())));
                         },
                       );
 
