@@ -21,10 +21,13 @@ class _LogInPageState extends State<LogInPage> {
         child: Form(
             child: Column(
           children: [
-            TextFormField(
-              decoration: const InputDecoration(
-                  hintText: "Enter your Username",
-                  border: OutlineInputBorder()),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                    hintText: "Enter your Username",
+                    border: OutlineInputBorder()),
+              ),
             )
           ],
         )),

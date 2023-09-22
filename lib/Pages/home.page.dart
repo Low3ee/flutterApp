@@ -123,9 +123,8 @@ class _HomePageState extends State<HomePage> {
             InkWell(
               onTap: () {
                 if (UserData.checkStatus() == false) {
-                  String title = "Unregistered paka oy";
-                  String message = "Pa register sad oy waa ka!";
-                  showAlertDialog(context, title, message);
+                  showAlertDialog(
+                      context, "Unregistered paka oy", "Unregistered paka oy");
                 } else {
                   Navigator.push(
                       context,
