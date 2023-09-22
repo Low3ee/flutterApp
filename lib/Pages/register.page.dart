@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../data/data.dart';
 import 'home.page.dart';
-import 'mobileApp/login.page.dart';
+import 'login.page.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -93,11 +93,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         Color.fromARGB(255, 54, 151, 161)),
                   ),
                   onPressed: () {
-                    String message;
-                    String title;
                     if (_registerKey.currentState!.validate()) {
-                      title = "Succesful";
-                      message = "You have registered Succesfully";
                       Widget homeButton = TextButton(
                         child: const Text("Continue"),
                         onPressed: () {
@@ -111,25 +107,29 @@ class _RegisterPageState extends State<RegisterPage> {
 
                       UserData.setData(
                           getFName.text, getLName.text, getEmail.text, true);
-                      showAlertDialog(context, title, message, homeButton);
+
+                      showAlertDialog(context, "Succesful",
+                          "You have registered Succesfully", homeButton);
                     } else {
-                      title = "Registration Unsuccessful";
-                      message =
-                          "There was an error in your registration. Please try again.";
                       Widget okButton = TextButton(
                         child: const Text(
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
-                            "<"),
+                            " < "),
                         onPressed: () {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: ((context) => const LogInPage())));
+                                  builder: ((context) =>
+                                      const RegisterPage())));
                         },
                       );
 
-                      showAlertDialog(context, title, message, okButton);
+                      showAlertDialog(
+                          context,
+                          "Registration Unsuccessful",
+                          "There was an error in your registration. Please try again.",
+                          okButton);
                     }
                   },
                   child: const Text("Enter"),

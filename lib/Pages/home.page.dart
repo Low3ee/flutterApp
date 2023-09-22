@@ -5,6 +5,7 @@ import 'package:webapp/data/data.dart';
 import 'column.page.dart';
 import 'container.page.dart';
 import 'datapage.dart';
+import 'login.page.dart';
 import 'row.page.dart';
 import 'text.page.dart';
 
@@ -151,6 +152,18 @@ class _HomePageState extends State<HomePage> {
                 child: Padding(
                   padding: EdgeInsets.all(12),
                   child: Text("5.) Register Page"),
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const LogInPage()));
+              },
+              child: const Card(
+                child: Padding(
+                  padding: EdgeInsets.all(12),
+                  child: Text("5.) Log In Page"),
                 ),
               ),
             )
